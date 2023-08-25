@@ -8,10 +8,33 @@ class Home {
     this.countWindows = countWindows;
     this.floor = floor;
   }
- 
+
   eat() {
     console.log("Eated");
   }
 }
 
-let home = new Home(12, 24, 3);
+class People {
+  save() {
+    console.log("saved");
+  }
+}
+
+class Customer extends People {
+  sale() {
+    console.log("saled");
+  }
+}
+
+class Employee {
+  payTax() {
+    console.log("payed");
+  }
+}
+
+// let customer = new Customer()
+
+// customer.save();
+// customer.sale();
+
+
