@@ -1,5 +1,5 @@
 class Home {
-  countRooms: number;
+  private countRooms: number; // access only main comp.
   countWindows: number;
   floor: number;
 
@@ -14,7 +14,10 @@ class Home {
   }
 }
 
+let home = new Home(12, 24, 3);
+
 class People {
+  protected name: string;
   save() {
     console.log("saved");
   }
@@ -31,10 +34,3 @@ class Employee {
     console.log("payed");
   }
 }
-
-// let customer = new Customer()
-
-// customer.save();
-// customer.sale();
-
-
