@@ -28,6 +28,16 @@ var home = new Home(12, 24, 3);
 var People = /** @class */ (function () {
     function People() {
     }
+    Object.defineProperty(People.prototype, "name", {
+        get: function () {
+            return this._name;
+        },
+        set: function (name) {
+            this._name = name;
+        },
+        enumerable: false,
+        configurable: true
+    });
     People.prototype.save = function () {
         console.log("saved");
     };
@@ -51,3 +61,7 @@ var Employee = /** @class */ (function () {
     };
     return Employee;
 }());
+var customer = new Customer();
+console.log(customer.name);
+customer.name = "Murad";
+console.log(customer.name);

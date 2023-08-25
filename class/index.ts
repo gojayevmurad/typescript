@@ -17,7 +17,16 @@ class Home {
 let home = new Home(12, 24, 3);
 
 class People {
-  protected name: string;
+  protected _name: string;
+
+  get name(): string {
+    return this._name;
+  }
+
+  set name(name: string) {
+    this._name = name;
+  }
+
   save() {
     console.log("saved");
   }
@@ -34,3 +43,9 @@ class Employee {
     console.log("payed");
   }
 }
+
+let customer = new Customer();
+
+console.log(customer.name);
+customer.name = "David";
+console.log(customer.name);
